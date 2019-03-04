@@ -12,6 +12,7 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
+    let dataGrabber = DataManager()
 
 
     override func viewDidLoad() {
@@ -20,13 +21,13 @@ class MasterViewController: UITableViewController {
         navigationItem.leftBarButtonItem = editButtonItem
 
         
-//        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-//        navigationItem.rightBarButtonItem = addButton
-        
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        dataGrabber.getData()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

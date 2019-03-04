@@ -104,11 +104,11 @@
 				53101AC6222D6AF9005C26ED /* AppDelegate.swift */,
 				53101AC8222D6AF9005C26ED /* MasterViewController.swift */,
 				53101ACA222D6AF9005C26ED /* DetailViewController.swift */,
+				53101AF6222D6C74005C26ED /* DataManager.swift */,
 				53101ACC222D6AF9005C26ED /* Main.storyboard */,
 				53101ACF222D6AFA005C26ED /* Assets.xcassets */,
 				53101AD1222D6AFA005C26ED /* LaunchScreen.storyboard */,
 				53101AD4222D6AFA005C26ED /* Info.plist */,
-				53101AF6222D6C74005C26ED /* DataManager.swift */,
 			);
 			path = SimpleJSON_NQM;
 			sourceTree = "<group>";

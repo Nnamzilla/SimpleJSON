@@ -25,7 +25,7 @@ class DataManager: NSObject {
             }
             
             if let successfulData = data {
-                print(successfulData)
+                print(String(data: successfulData, encoding: String.Encoding.ascii))
             }
             
         }
