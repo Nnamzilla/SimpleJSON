@@ -15,6 +15,7 @@
 		53101AD3222D6AFA005C26ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53101AD1222D6AFA005C26ED /* LaunchScreen.storyboard */; };
 		53101ADE222D6AFA005C26ED /* SimpleJSON_NQMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53101ADD222D6AFA005C26ED /* SimpleJSON_NQMTests.swift */; };
 		53101AE9222D6AFA005C26ED /* SimpleJSON_NQMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53101AE8222D6AFA005C26ED /* SimpleJSON_NQMUITests.swift */; };
+		53101AF7222D6C74005C26ED /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53101AF6222D6C74005C26ED /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		53101AE4222D6AFA005C26ED /* SimpleJSON_NQMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleJSON_NQMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53101AE8222D6AFA005C26ED /* SimpleJSON_NQMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJSON_NQMUITests.swift; sourceTree = "<group>"; };
 		53101AEA222D6AFA005C26ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53101AF6222D6C74005C26ED /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				53101ACF222D6AFA005C26ED /* Assets.xcassets */,
 				53101AD1222D6AFA005C26ED /* LaunchScreen.storyboard */,
 				53101AD4222D6AFA005C26ED /* Info.plist */,
+				53101AF6222D6C74005C26ED /* DataManager.swift */,
 			);
 			path = SimpleJSON_NQM;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53101ACB222D6AF9005C26ED /* DetailViewController.swift in Sources */,
+				53101AF7222D6C74005C26ED /* DataManager.swift in Sources */,
 				53101AC9222D6AF9005C26ED /* MasterViewController.swift in Sources */,
 				53101AC7222D6AF9005C26ED /* AppDelegate.swift in Sources */,
 			);
