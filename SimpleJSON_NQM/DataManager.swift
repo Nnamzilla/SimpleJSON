@@ -22,32 +22,26 @@ class DataManager: NSObject {
         let task = URLSession.shared.dataTask(with: actualUrl!) { (data, response, error) in
             
             if let _ = data, error == nil {
-                // we had an arror or the data didn't come back
                 if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
                     
-                    //getting the characters tag array from json and converting it to NSArray
+                    // getting the characters tag array from json and converting it to NSArray
                     if let veggieArray = jsonObj!.value(forKey:"characters") as? Array<String> {
                         self.dataArray = veggieArray
                         
-                        //printing the json in onsole
+                        // printing the json in onsole
                         print(jsonObj!.value(forKey: "characters")!)
                     
                     }
                 }
                 
             } else {
+                // we had an error or the data didn't come back
                 success = false
-                completion(success)
-                return
             }
             
-            
-//            if let successfulData = data {
-//                print(String(data: successfulData, encoding: String.Encoding.ascii))
-//            }
-            
-            // call back to the completion handler that was passed
-            completion(success)
+
+            // call back to the completion handler that was passed in, notifying to do things (we don't care what)
+                completion(success)
             
         }
         task.resume()
