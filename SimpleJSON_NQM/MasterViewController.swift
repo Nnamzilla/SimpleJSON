@@ -26,7 +26,14 @@ class MasterViewController: UITableViewController {
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        dataGrabber.getData()
+        self.title = "Veggies That Talk"
+        
+        dataGrabber.getData(completion: { success in self.objects = self.dataGrabber.dataArray
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
         
     }
 
@@ -47,7 +54,7 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                let object = objects[indexPath.row] as! String
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
